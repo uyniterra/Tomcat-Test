@@ -1,0 +1,122 @@
+29-Jan-2023 17:22:37.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.30
+29-Jan-2023 17:22:37.519 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 7 2019 16:42:04 UTC
+29-Jan-2023 17:22:37.519 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.30.0
+29-Jan-2023 17:22:37.519 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+29-Jan-2023 17:22:37.520 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.10.157-139.675.amzn2.x86_64
+29-Jan-2023 17:22:37.520 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Jan-2023 17:22:37.520 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /root/GIHUB/TOMACAT/zulu8.46.0.19-ca-jdk8.0.252-linux_x64/jre
+29-Jan-2023 17:22:37.520 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_252-b14
+29-Jan-2023 17:22:37.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+29-Jan-2023 17:22:37.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:22:37.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:22:37.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/conf/logging.properties
+29-Jan-2023 17:22:37.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Jan-2023 17:22:37.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Jan-2023 17:22:37.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Jan-2023 17:22:37.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+29-Jan-2023 17:22:37.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Jan-2023 17:22:37.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:22:37.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:22:37.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/temp
+29-Jan-2023 17:22:37.524 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+29-Jan-2023 17:22:37.829 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+29-Jan-2023 17:22:37.844 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:983)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1057)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:303)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.net.BindException: Address already in use
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:433)
+		at sun.nio.ch.Net.bind(Net.java:425)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220)
+		at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:85)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:229)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:212)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1154)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:575)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:74)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+		... 13 more
+29-Jan-2023 17:22:37.845 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+29-Jan-2023 17:22:37.865 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [537] milliseconds
+29-Jan-2023 17:22:37.893 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Jan-2023 17:22:37.894 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.30]
+29-Jan-2023 17:22:37.906 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/ROOT]
+29-Jan-2023 17:22:38.202 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/ROOT] has finished in [296] ms
+29-Jan-2023 17:22:38.203 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/docs]
+29-Jan-2023 17:22:38.216 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/docs] has finished in [13] ms
+29-Jan-2023 17:22:38.216 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/examples]
+29-Jan-2023 17:22:38.461 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/examples] has finished in [244] ms
+29-Jan-2023 17:22:38.461 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/host-manager]
+29-Jan-2023 17:22:38.498 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/host-manager] has finished in [37] ms
+29-Jan-2023 17:22:38.499 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/manager]
+29-Jan-2023 17:22:38.514 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/manager] has finished in [15] ms
+29-Jan-2023 17:22:38.517 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+29-Jan-2023 17:22:38.529 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [664] milliseconds
+29-Jan-2023 17:24:27.118 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.30
+29-Jan-2023 17:24:27.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 7 2019 16:42:04 UTC
+29-Jan-2023 17:24:27.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.30.0
+29-Jan-2023 17:24:27.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+29-Jan-2023 17:24:27.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.10.157-139.675.amzn2.x86_64
+29-Jan-2023 17:24:27.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+29-Jan-2023 17:24:27.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /root/GIHUB/TOMACAT/zulu8.46.0.19-ca-jdk8.0.252-linux_x64/jre
+29-Jan-2023 17:24:27.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_252-b14
+29-Jan-2023 17:24:27.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+29-Jan-2023 17:24:27.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:24:27.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:24:27.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/conf/logging.properties
+29-Jan-2023 17:24:27.124 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Jan-2023 17:24:27.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+29-Jan-2023 17:24:27.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Jan-2023 17:24:27.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+29-Jan-2023 17:24:27.126 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+29-Jan-2023 17:24:27.126 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:24:27.126 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30
+29-Jan-2023 17:24:27.127 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/temp
+29-Jan-2023 17:24:27.127 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+29-Jan-2023 17:24:27.467 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8989"]
+29-Jan-2023 17:24:27.494 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8089"]
+29-Jan-2023 17:24:27.500 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [560] milliseconds
+29-Jan-2023 17:24:27.534 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+29-Jan-2023 17:24:27.535 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.30]
+29-Jan-2023 17:24:27.553 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/ROOT]
+29-Jan-2023 17:24:27.826 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/ROOT] has finished in [274] ms
+29-Jan-2023 17:24:27.827 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/docs]
+29-Jan-2023 17:24:27.856 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/docs] has finished in [29] ms
+29-Jan-2023 17:24:27.857 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/examples]
+29-Jan-2023 17:24:28.095 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/examples] has finished in [238] ms
+29-Jan-2023 17:24:28.096 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/host-manager]
+29-Jan-2023 17:24:28.134 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/host-manager] has finished in [39] ms
+29-Jan-2023 17:24:28.135 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/manager]
+29-Jan-2023 17:24:28.158 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/root/GIHUB/TOMACAT/apache-tomcat-9.0.30/webapps/manager] has finished in [23] ms
+29-Jan-2023 17:24:28.162 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8989"]
+29-Jan-2023 17:24:28.173 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8089"]
+29-Jan-2023 17:24:28.176 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [675] milliseconds
+29-Jan-2023 17:25:08.127 SEVERE [ajp-nio-8089-exec-1] org.apache.coyote.ajp.AjpMessage.processHeader Invalid message received with signature [5635]
+29-Jan-2023 17:25:44.763 INFO [http-nio-8989-exec-1] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:415)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:260)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+29-Jan-2023 17:25:55.874 SEVERE [ajp-nio-8089-exec-2] org.apache.coyote.ajp.AjpMessage.processHeader Invalid message received with signature [5635]
